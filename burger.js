@@ -14,7 +14,7 @@ function forward() {
     
     anime({
         targets: '.menu_small_icon',
-        rotate: 90,
+        rotate: 180,
         easing: 'easeInOutQuad',
         direction: 'alternate',
         duration: 1000,
@@ -53,7 +53,7 @@ function backward() {
     
     anime({
         targets: '.menu_small_icon',
-        rotate: -90,
+        rotate: 0,
         easing: 'easeInOutQuad',
         direction: 'alternate',
         duration: 1000,
@@ -62,7 +62,7 @@ function backward() {
     
     anime({
         targets: '.stick',
-        rotate: -180,
+        rotate: 0,
         easing: 'easeInOutQuad',
         direction: 'alternate',
         duration: 1000,
@@ -80,9 +80,6 @@ function backward() {
     condition = true; 
 }
 
-
-
-
 $('.menu_small_icon').on('touchend', function () {
     if (condition) {
         forward();
@@ -94,15 +91,6 @@ $('.menu_small_icon').on('touchend', function () {
 $('.menu_small_item').on('touchend', function () {
     backward();
 });
-
-// $('.menu_small_icon').on('click', function () {
-//     if (condition) {
-//         forward();
-//     } else {
-//         backward();
-//     }
-// });
-
 
 $('.container').on('touchstart', function (event) {
     start = event.originalEvent.touches[0].pageX;
