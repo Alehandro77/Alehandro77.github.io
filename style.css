@@ -237,6 +237,16 @@ footer {
     background-color: #ff8080;
 }
 
+.slider {
+    width: 400px;
+}
+
+.centre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 form {
     width: 80%;
     display: flex;
